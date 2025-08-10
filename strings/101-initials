@@ -23,3 +23,12 @@ function abbrevName(name) {
 }
 
 console.log(abbrevName('Arthur Dent')); // A.D.
+
+//поняла, что в предыдущем решении утрачена семантика переменных, вспомнила про деструктуризацию массива
+function abbrevName(name) {
+  const [firstName, lastName] = name.split(' ');
+
+  return `${firstName.charAt(0)}.${lastName.charAt(0)}.`;
+}
+
+console.log(abbrevName('Alexa Tarik'));

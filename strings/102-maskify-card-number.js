@@ -7,7 +7,8 @@
 
 function maskify(cc) {
   const lastFourChars = cc.slice(-4);
-  return (maskedValue = lastFourChars.padStart(cc.length, '#'));
+  const maskedValue = lastFourChars.padStart(cc.length, '#');
+  return maskedValue;
 }
 
 console.log(maskify('31415926535897932384')); // '################2384'

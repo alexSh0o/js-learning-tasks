@@ -4,6 +4,7 @@ console.log(abbrevName("Natalie Portman")); // "N.P."
 Гарантируется, что полное имя состоит из двух слов, разделенных одним пробелом.
  */
 
+//первая попытка со встроенным методом substring()
 function abbrevName(name) {
   const fullName = name.split(' ');
   let firstName = fullName[0].substring(0, 1);
@@ -13,3 +14,12 @@ function abbrevName(name) {
 }
 
 console.log(abbrevName('Alexandra Tarik')); // 'A.T.'
+
+//заменила отдельные переменные на обращение к символу при помощи charAt()
+function abbrevName(name) {
+  const fullName = name.split(' ');
+
+  return `${fullName[0].charAt(0)}.${fullName[1].charAt(0)}.`;
+}
+
+console.log(abbrevName('Arthur Dent')); // A.D.

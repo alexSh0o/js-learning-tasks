@@ -1,0 +1,15 @@
+/* Реализуйте функцию, которая по полному имени, состоящему из имени и фамилии, возвращает инициалы:
+
+console.log(abbrevName("Natalie Portman")); // "N.P."
+Гарантируется, что полное имя состоит из двух слов, разделенных одним пробелом.
+ */
+
+function abbrevName(name) {
+  const fullName = name.split(' ');
+  let firstName = fullName[0].substring(0, 1);
+  let lastName = fullName[1].substring(0, 1);
+
+  return `${firstName}.${lastName}.`;
+}
+
+console.log(abbrevName('Alexandra Tarik')); // 'A.T.'
